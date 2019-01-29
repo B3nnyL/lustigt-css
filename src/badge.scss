@@ -1,0 +1,10 @@
+@import 'mixins';
+@import 'variables';
+
+@each $color in $yellow,
+$red,
+$blue,
+$purple,
+$black {
+  @include badge-factory($color)
+}
