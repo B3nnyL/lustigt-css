@@ -11,7 +11,7 @@ storiesOf("inputs", module)
   })
   .add("input disabled", () => {
     const inputGroup = `<div class="input-group">
-    <label class="label">Label</label>
+    <label class="label disabled">Label</label>
     <input type="text" placeholder="23333" disabled/>
   </div>`;
     return inputGroup;
@@ -41,7 +41,7 @@ storiesOf("inputs", module)
   })
   .add("textarea disabled", () => {
     const inputGroup = `<div class="input-group">
-    <label class="label">Label</label>
+    <label class="label disabled">Label</label>
     <textarea type="text" placeholder="23333" disabled></textarea>
     </div>`;
     return inputGroup;
@@ -57,6 +57,10 @@ storiesOf("inputs", module)
       <input type="radio" name="foo">
       <span class="radio"></span>
     </label>
+    <label class="container disabled">Three
+      <input type="radio" name="foo" disabled>
+      <span class="radio disabled"></span>
+    </label>
     </div>`;
     return inputGroup;
   })
@@ -70,6 +74,10 @@ storiesOf("inputs", module)
     <label class="container">Two
       <input type="checkbox" name="foo">
       <span class="checkmark"></span>
+    </label>
+     <label class="container disabled">Three
+      <input type="checkbox" name="foo" disabled>
+      <span class="checkmark disabled"></span>
     </label>
     </div>`;
     return inputGroup;
@@ -104,9 +112,9 @@ storiesOf("inputs", module)
       <input type="checkbox" name="foo">
       <span class="switch"></span>
     </label>
-    <label class="switch-group">Two
-      <input type="checkbox" name="two">
-      <span class="switch"></span>
+    <label class="switch-group disabled">Two
+      <input type="checkbox" name="two" disabled>
+      <span class="switch disabled"></span>
     </label>
     </div>`;
     return inputGroup;

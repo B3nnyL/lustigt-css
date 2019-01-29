@@ -10,6 +10,10 @@
     margin-bottom: 4px;
   }
 
+  .label.disabled {
+    color: #C2C2C2;
+  }
+
   input[type="text"] {
     border: 1px solid #4A4A4A;
     box-sizing: border-box;
@@ -106,6 +110,11 @@
       width: 0;
     }
 
+    &.disabled {
+      color: #C2C2C2;
+      cursor: auto;
+    }
+
     .radio {
       position: absolute;
       top: 0;
@@ -124,7 +133,7 @@
       }
     }
 
-    &:hover input~.radio {
+    &:not(.disabled):hover input~.radio {
       background-color: #FEF6DF;
       border: 1px solid #DAA500;
     }
@@ -135,6 +144,11 @@
 
     & input:checked~.radio:after {
       display: block;
+    }
+
+    .radio.disabled {
+      background: #F5F5F5;
+      border-color: #C2C2C2;
     }
 
     .radio:after {
@@ -164,7 +178,7 @@
       }
     }
 
-    &:hover input~.checkmark {
+    &:not(.disabled):hover input~.checkmark {
       background-color: #FEF6DF;
       border: 1px solid #DAA500;
     }
@@ -197,7 +211,10 @@
       transform: rotate(90deg);
     }
 
-
+    .checkmark.disabled {
+      background: #F5F5F5;
+      border-color: #C2C2C2;
+    }
   }
 
   .switch-group {
@@ -237,9 +254,17 @@
         border-radius: 50%;
         background-color: #4a4a4a;
       }
+
+      &.disabled:after {
+        background-color: #C2C2C2;
+      }
+
+      &.disabled {
+        cursor: auto;
+      }
     }
 
-    &:hover input~.switch {
+    &:not(.disabled):hover input~.switch {
       background-color: #FEF6DF;
       border-color: #DAA500;
     }
@@ -251,6 +276,11 @@
       height: 13px;
       border-radius: 50%;
       background-color: #DAA500;
+    }
+
+    .switch.disabled {
+      background: #F5F5F5;
+      border-color: #C2C2C2;
     }
   }
 }
