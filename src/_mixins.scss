@@ -1,5 +1,9 @@
-@mixin badge-factory($color) {
-  .badge-#{$color} {
+@import "partials";
+@import "tokens/spaceToken";
+@import "tokens/colorToken";
+
+@mixin badge-factory($name, $color) {
+  .badge-#{$name} {
     background: #{$color};
     font-size: 12px;
     line-height: 12px;
@@ -7,8 +11,153 @@
     font-weight: 400;
     color: #fff;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px $SPACE-MICRO;
     max-width: 80px;
     border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+
+@mixin button-factory($name, $color, $accent) {
+  .button-#{$name}--filled {
+    background: #{$color};
+    color: #fff;
+    text-align: center;
+    @extend %normal-button;
+
+    &:not(:disabled):hover {
+      color: #{$color};
+      background: #{$accent};
+      @extend %shadow--lg;
+    }
+
+    &:disabled {
+      color: $NEUTRAL-ACCENT-2;
+      background: $NEUTRAL-ACCENT-3;
+      border: none;
+      cursor: auto;
+    }
+  }
+
+  .button-#{$name}-sm--filled {
+    background: #{$color};
+    color: #fff;
+    text-align: center;
+    @extend %small-button;
+
+    &:not(:disabled):hover {
+      color: #{$color};
+      background: #{$accent};
+      @extend %shadow--lg;
+    }
+
+    &:disabled {
+      color: $NEUTRAL-ACCENT-2;
+      background: $NEUTRAL-ACCENT-3;
+      border: none;
+      cursor: auto;
+    }
+  }
+
+  .link-#{$name} {
+    background: transparent;
+    color: #{$color};
+    text-align: center;
+    @extend %normal-button;
+    @extend %hover-animation;
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+      width: 85%;
+      height: 5px;
+      background: #{$color};
+      transition: opacity .3s;
+    }
+
+    &:not(:disabled):hover::after {
+      opacity: 1;
+    }
+
+    &:disabled {
+      color: $NEUTRAL-ACCENT-2;
+    }
+  }
+
+  .link-#{$name}-sm {
+    background: transparent;
+    color: #{$color};
+    text-align: center;
+    @extend %small-button;
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: 5px;
+      left: 10px;
+      opacity: 0;
+      width: 85%;
+      height: 3px;
+      background: #{$color};
+      transition: opacity .3s;
+    }
+
+    &:not(:disabled):hover::after {
+      opacity: 1;
+    }
+
+    &:disabled {
+      color: $NEUTRAL-ACCENT-2;
+    }
+  }
+
+  .button-#{$name} {
+    background: #fff;
+    color: #{$color};
+    border: 2px solid #{$color};
+    text-align: center;
+    @extend %normal-button;
+
+    &:not(:disabled):hover {
+      color: #{$color};
+      background: #{$accent};
+      border: 2px solid #{$accent};
+      @extend %shadow--lg;
+    }
+
+    &:disabled {
+      color: $NEUTRAL-ACCENT-2;
+      background: $NEUTRAL-ACCENT-3;
+      border: none;
+      cursor: auto;
+    }
+  }
+
+  .button-#{$name}-sm {
+    background: #fff;
+    color: #{$color};
+    border: 2px solid #{$color};
+    text-align: center;
+    @extend %small-button;
+
+    &:not(:disabled):hover {
+      color: #{$color};
+      background: #{$accent};
+      border: 2px solid #{$accent};
+      @extend %shadow--lg;
+    }
+
+    &:disabled {
+      color: $NEUTRAL-ACCENT-2;
+      background: $NEUTRAL-ACCENT-3;
+      border: none;
+      cursor: auto;
+    }
   }
 }
