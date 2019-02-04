@@ -1,5 +1,21 @@
-.smart-btn {
-  padding: 10px;
-  background-color: black;
-  color: white;
+@import 'mixins';
+@import 'tokens/colorToken';
+
+@each $name,
+$color,
+$accent in ('yellow', $YELLOW-PRIMARY, $YELLOW-ACCENT-2),
+('red', $RED-PRIMARY, $RED-ACCENT-2),
+('purple', $PURPLE-PRIMARY, $PURPLE-ACCENT-2),
+('aoi', $AOI-PRIMARY, $AOI-ACCENT-2),
+('green', $GREEN-PRIMARY, $GREEN-ACCENT-2),
+('blue', $BLUE-PRIMARY, $BLUE-ACCENT-2),
+('neutral', $NEUTRAL-PRIMARY, $NEUTRAL-ACCENT-1) {
+  @include button-factory($name, $color, $accent)
+}
+
+.button-neutral-sm--filled,
+.button-neutral--filled {
+  &:not(:disabled):hover {
+    color: #fff;
+  }
 }
