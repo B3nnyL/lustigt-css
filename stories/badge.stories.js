@@ -8,9 +8,9 @@ storiesOf("Badges", module)
     badge.innerText = "Hello Badge";
     return badge;
   })
-  .add("badge black", () => {
+  .add("badge neutral", () => {
     const badge = document.createElement("div");
-    badge.className = "badge-black";
+    badge.className = "badge-neutral";
     badge.innerText = "Hello Badge";
     return badge;
   })
@@ -29,6 +29,18 @@ storiesOf("Badges", module)
   .add("badge yellow", () => {
     const badge = document.createElement("div");
     badge.className = "badge-yellow";
+    badge.innerText = "Hello Badge";
+    return badge;
+  })
+  .add("badge aoi", () => {
+    const badge = document.createElement("div");
+    badge.className = "badge-aoi";
+    badge.innerText = "Hello Badge";
+    return badge;
+  })
+  .add("badge green", () => {
+    const badge = document.createElement("div");
+    badge.className = "badge-green";
     badge.innerText = "Hello Badge";
     return badge;
   });
