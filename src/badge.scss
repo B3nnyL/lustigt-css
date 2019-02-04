@@ -1,10 +1,13 @@
 @import 'mixins';
-@import 'variables';
+@import 'tokens/colorToken';
 
-@each $color in $yellow,
-$red,
-$blue,
-$purple,
-$black {
-  @include badge-factory($color)
+@each $name,
+$color in ('yellow', $YELLOW-PRIMARY),
+('red', $RED-PRIMARY),
+('purple', $PURPLE-PRIMARY),
+('aoi', $AOI-PRIMARY),
+('green', $GREEN-PRIMARY),
+('blue', $BLUE-PRIMARY),
+('neutral', $NEUTRAL-PRIMARY) {
+  @include badge-factory($name, $color)
 }
