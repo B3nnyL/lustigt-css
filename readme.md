@@ -1,18 +1,6 @@
-# SCSS Storybook Quickstarter
+# Lustigt
 
 ## Basics
-
-```shell
-//installation
-git clone https://github.com/B3nnyL/scss-storybook.git
-npm i
-
-//storybook
-npm run storybook
-
-//build
-npm run build
-```
 
 - All stories are alocated in `/.stories`
 - static file are placed in `/src`
