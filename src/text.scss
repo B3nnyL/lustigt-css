@@ -1,0 +1,65 @@
+@import 'tokens/_spaceToken';
+@import 'tokens/_typoToken';
+@import 'tokens/_colorToken';
+
+ul,
+ol {
+  padding-left: $SPACE-NORMAL;
+  margin-top: $SPACE-NANO;
+}
+
+ul {
+  &:nth-child(n+1) li {
+    list-style-type: none;
+
+    &::before {
+      display: inline-block;
+      position: relative;
+      content: '';
+      background-color: $YELLOW-PRIMARY;
+      width: 8px;
+      height: 3px;
+      left: -6px;
+      top: -3px;
+    }
+  }
+
+  &:nth-child(n+2) li {
+    list-style-type: none;
+
+    &::before {
+      display: inline-block;
+      position: relative;
+      content: '';
+      background-color: $NEUTRAL-ACCENT-1;
+      width: 8px;
+      height: 3px;
+      left: -6px;
+      top: -3px;
+    }
+  }
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: lustigt-counter;
+
+  &:nth-child(n+1) li {
+
+    &::before {
+      counter-increment: lustigt-counter;
+      content: ""counter(lustigt-counter) ". ";
+      color: $YELLOW-PRIMARY;
+      padding-right: 5px;
+    }
+  }
+
+  &:nth-child(n+2) li {
+    &::before {
+      counter-increment: lustigt-counter;
+      content: ""counter(lustigt-counter) ". ";
+      padding-right: 5px;
+      color: $NEUTRAL-ACCENT-1;
+    }
+  }
+}
