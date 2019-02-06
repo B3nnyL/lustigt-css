@@ -1,6 +1,53 @@
-@import 'tokens/_spaceToken';
-@import 'tokens/_typoToken';
-@import 'tokens/_colorToken';
+@import 'tokens/main';
+@import 'utils/partials';
+
+h1,
+h2,
+h3,
+h4,
+label,
+span,
+p,
+li,
+ul,
+ol {
+  color: $NEUTRAL-PRIMARY;
+}
+
+h1,
+.h1 {
+  @extend %h1;
+}
+
+h2,
+.h2 {
+  @extend %h2;
+}
+
+h3,
+.h3 {
+  @extend %h3;
+}
+
+h4,
+.h4 {
+  @extend %h4;
+}
+
+p,
+.para {
+  @extend %p;
+}
+
+span,
+.span {
+  @extend %span;
+}
+
+label,
+.label {
+  @extend %label;
+}
 
 ul,
 ol {
@@ -62,4 +109,11 @@ ol {
       color: $NEUTRAL-ACCENT-1;
     }
   }
+}
+
+p:last-of-type,
+.para:last-of-type,
+ul:last-of-type,
+ol:last-of-type {
+  margin-bottom: $SPACE-NORMAL;
 }

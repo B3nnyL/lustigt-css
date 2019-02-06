@@ -1,4 +1,4 @@
-@import "../tokens/spaceToken";
+@import "../tokens/main";
 
 %normal-button {
   font-size: 18px;
@@ -31,4 +31,69 @@
 %hover-animation {
   transition-property: all;
   transition-duration: 100ms;
+}
+
+%h1 {
+  font-family: $H1-FONT-FAMILY;
+  font-size: $H1-FONT-SIZE;
+  font-weight: $H1-FONT-WEIGHT;
+  letter-spacing: $H1-LETTER-SPACING;
+  line-height: $H1-LINE-HEIGHT;
+  margin: 0px;
+  margin-bottom: $SPACE-NORMAL;
+}
+
+%h2 {
+  font-family: $H2-FONT-FAMILY;
+  font-size: $H2-FONT-SIZE;
+  font-weight: $H2-FONT-WEIGHT;
+  letter-spacing: $H2-LETTER-SPACING;
+  line-height: $H2-LINE-HEIGHT;
+  margin: 0px;
+  margin-bottom: $SPACE-NORMAL;
+}
+
+%h3 {
+  font-family: $H3-FONT-FAMILY;
+  font-size: $H3-FONT-SIZE;
+  font-weight: $H3-FONT-WEIGHT;
+  letter-spacing: $H3-LETTER-SPACING;
+  line-height: $H3-LINE-HEIGHT;
+  margin: 0px;
+  margin-bottom: $SPACE-NANO;
+}
+
+%h4 {
+  font-family: $H4-FONT-FAMILY;
+  font-size: $H4-FONT-SIZE;
+  font-weight: $H4-FONT-WEIGHT;
+  letter-spacing: $H4-LETTER-SPACING;
+  line-height: $H4-LINE-HEIGHT;
+  margin: 0px;
+  margin-bottom: $SPACE-NANO;
+}
+
+%p {
+  font-family: $P-FONT-FAMILY;
+  font-size: $P-FONT-SIZE;
+  font-weight: $P-FONT-WEIGHT;
+  letter-spacing: $P-LETTER-SPACING;
+  line-height: $P-LINE-HEIGHT;
+  margin: 0px;
+}
+
+%label {
+  font-family: $LABEL-FONT-FAMILY;
+  font-size: $LABEL-FONT-SIZE;
+  font-weight: $LABEL-FONT-WEIGHT;
+  letter-spacing: $LABEL-LETTER-SPACING;
+  line-height: $LABEL-LINE-HEIGHT;
+}
+
+%span {
+  font-family: $SPAN-FONT-FAMILY;
+  font-size: $SPAN-FONT-SIZE;
+  font-weight: $SPAN-FONT-WEIGHT;
+  letter-spacing: $SPAN-LETTER-SPACING;
+  line-height: $SPAN-LINE-HEIGHT;
 }
