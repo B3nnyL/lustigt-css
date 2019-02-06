@@ -1,5 +1,20 @@
-@import 'mixins';
-@import 'tokens/colorToken';
+@import 'tokens/main';
+
+@mixin badge-factory($name, $color) {
+  .badge-#{$name} {
+    background: #{$color};
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.9;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding: 5px $SPACE-MICRO;
+    max-width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
 
 @each $name,
 $color in ('yellow', $YELLOW-PRIMARY),
